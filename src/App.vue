@@ -1,8 +1,8 @@
 <template>
     <div>
         <SearchBar @termChange="onTermChange"></SearchBar>
-        <VideoList></VideoList>
-        {{ videos.length }}
+        <!--<VideoList v-bind:videos="videos"></VideoList>--><!-- Bind with v-bind -->
+        <VideoList :videos="videos"></VideoList><!-- Bind with :-->
     </div>
 </template>
 
