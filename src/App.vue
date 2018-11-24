@@ -2,6 +2,7 @@
     <div>
         <SearchBar @termChange="onTermChange"></SearchBar>
         <VideoList></VideoList>
+        {{ videos.length }}
     </div>
 </template>
 
@@ -18,10 +19,10 @@ export default {
         SearchBar,
         VideoList
     },
-    data: function() { // Because component. This needs to be function
+    data() { // Because component. This needs to be function
         return {
-
-        }
+            videos: []
+        };
     },
     methods: {
         onTermChange(searchTerm) {
@@ -33,7 +34,9 @@ export default {
                     part: 'snippet',
                     q: searchTerm
                 }
-            }).then(response => console.log(response));
+            }).then(response => {
+                this.videos = response.data.items;
+            });
         }
     }
 };
