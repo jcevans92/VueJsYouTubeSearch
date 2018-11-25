@@ -1,4 +1,5 @@
 <template>
+<div class="col-md-4">
     <ul class="list-group">
         <VideoListItem
             v-for="video in videos" 
@@ -9,6 +10,7 @@
 
         </VideoListItem>
     </ul>
+</div>
 </template>
     
 <script>
