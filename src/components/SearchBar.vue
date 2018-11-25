@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!--<input v-on:input="onTextInput" />-->
+        <!--<input v-on:input="onTextInput" /> v-on = @-->
         <input @input="onTextInput" />
     </div>
 </template>
@@ -16,5 +16,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+input {
+    width:75%;
+}
+
+div {
+    text-align:center;
+    margin:20px;
+}
 </style>
